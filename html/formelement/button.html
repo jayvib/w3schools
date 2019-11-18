@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button</title>
+</head>
+<body>
+  <p id="p"></p>
+  <button type="button" onclick="alert('hello world!')">Click Me!</button>
+  <button type="button" onclick="hello()">Click Me!</button>
+
+  <script>
+    function hello() {
+      let p;
+      p = document.getElementById("p");
+      p.innerText = "amazing!";
+    }
+  </script>
+</body>
+</html>
