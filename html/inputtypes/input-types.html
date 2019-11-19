@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Types</title>
+</head>
+<body>
+  <h3>Text Input</h3>
+  <form>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+
+  <h3>Password Input</h3>
+  <form>
+    <label for="uname">Username:</label><br>
+    <input type="text" id="uname" name="username" placeholder="Enter Username..."><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter Password...">
+  </form>
+
+  <h3>Submit Input</h3>
+  <form>
+    <label for="uname">Username:</label><br>
+    <input type="text" id="uname" name="username" placeholder="Enter Username..."><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter Password..."><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h3>Reset Input</h3>
+  <form>
+    <label for="uname">Username:</label><br>
+    <input type="text" id="uname" name="username" placeholder="Enter Username..."><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter Password..."><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset">
+  </form>
+
+  <h3>Radio Input</h3>
+  <form>
+    <label for="gender">Gender:</label><br>
+    <input id="gender" type="radio" value="male">Male<br>
+    <input id="gender" type="radio" value="female">Female<br>
+  </form>
+
+  <h3>Checkbox Input</h3>
+  <form>
+    <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+    <input type="checkbox" name="vehicle2" value="Car" checked> I have a car<br>
+  </form>
+
+  <h3>Button Input</h3>
+  <form>
+    <input type="button" onclick="alert('hello world!')" value="click me!">
+  </form>
+
+  <h3>Color Input</h3>
+  <form>
+    <label for="color">Select your favorite color:</label>
+    <input type="color" name="favcolor" id="color">
+  </form>
+
+  <h3>Date Type</h3>
+  <form>
+    <label for="d">Date:</label>
+    <input type="date" name="d" id="d">
+  </form>
+
+  <h3>Date Local Type</h3>
+  <form>
+    <label for="d">Date:</label>
+    <input type="datetime-local" name="d" id="d">
+  </form>
+
+  <h3>Email Input</h3>
+  <form>
+    <label for="e">Email:</label>
+    <input type="email" name="email" id="e">
+  </form>
+
+  <h3>File Input</h3>
+  <form>
+    <label for="f">File:</label>
+    <input type="file" name="f" id="f">
+  </form>
+
+  <h3>Month Input Type</h3>
+  <form>
+    <label for="m">Month:</label>
+    <input type="month" name="m" id="m">
+  </form>
+
+  <h3>Number Input</h3>
+  <form>
+    <label for="n">Number:</label>
+    <input type="number" name="n" id="n" min="1" max="5">
+  </form>
+
+  <h3>Range Input</h3>
+  <form>
+    <input type="range" name="points" min="0" max="10">
+  </form>
+</body>
+</html>
