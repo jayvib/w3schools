@@ -1,0 +1,16 @@
+<html>
+   <body>
+       <h2>JavaScript Objects</h2>
+        <p>Full model</p>
+       <p id="demo"></p>
+       <script>
+           var car = {
+               type:"fiat", 
+               model:"500", 
+               color:"white",
+               full: function(){ return this.type + " " + this.model + " " + this.color; }
+           };
+           document.getElementById("demo").innerHTML = "The car full model is " + car.full(); 
+       </script>
+   </body>
+</html>
