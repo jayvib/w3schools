@@ -1,0 +1,19 @@
+<html>
+    <h2>Finding HTML Elements by Class Name</h2>
+
+    <p>Hello World</p>
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b></p>
+
+    <p id="demo"></p>
+    <script>
+        // get the class elements name with "intro"
+        var ps = document.getElementsByClassName("intro");
+
+        // get the element with id "demo"
+        var demo = document.getElementById("demo");
+
+        // assign the demo element with the first element of class "intro"
+        demo.innerHTML = ps[0].innerHTML;
+    </script>
+</html>

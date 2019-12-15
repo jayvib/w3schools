@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h2>Finding HTML Elements by Tag Name</h2>
+        <div id="main">
+            <p>The DOM is very useful.</p>
+            <p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+        </div>
+
+        <p id="demo"></p>
+
+        <script>
+            // Get the element that has id=main
+            var x = document.getElementById("main");
+
+            // get the <p> objects of main
+            var ps = x.getElementsByTagName("p");
+
+            // get the element that has an id=demo
+            var demo = document.getElementById("demo");
+
+            // assign the value of id=demo element by the value of the
+            // first paragraph of the main
+            demo.innerHTML = ps[0].innerHTML;
+        </script>
+    </body>
+</html>
