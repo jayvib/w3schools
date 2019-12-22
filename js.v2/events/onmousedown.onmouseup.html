@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+  <style>
+      div {
+        background-color: tomato;
+        width: 200px;
+        height: 100px;
+        padding: 50px;
+          text-align: center;
+      }
+  </style>
+</head>
+<body>
+  <div onmousedown="myDown(this)" onmouseup="myUp(this)">Mouse Over Me!</div>
+  <script>
+    function myDown(obj) {
+      obj.style.backgroundColor = "lightblue";
+      obj.innerHTML = "Thanks!";
+    }
+
+    function myUp(obj) {
+      obj.style.backgroundColor = "tomato";
+      obj.innerHTML = "Mouse Over Me";
+    }
+  </script>
+</body>
+</html>
