@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Form</title>
+</head>
+<body>
+  <h2>Finding HTML Elements Using document.forms</h2>
+  <form id="frm1" action="#">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" value="Donald"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" value="Duck"><br><br>
+    <input type="submit" value="submit">
+  </form>
+
+  <p>Click "Try it" to display the value of each element in the form.</p>
+  <button onclick="myFunc()">Try it</button>
+  <p id="demo"></p>
+  <script>
+    function myFunc() {
+      let x = document.forms["frm1"];
+      let txt = "";
+      let i;
+      for (i=0; i < x.length; i++) {
+        txt += x.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+  </script>
+</body>
+</html>

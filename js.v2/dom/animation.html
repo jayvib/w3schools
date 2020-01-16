@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #container {
+      background: yellow;
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+
+    #animate {
+      width: 50px;
+      background: red;
+      height: 50px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h2>My First JavaScript Animation</h2>
+  <div id="container">
+    <div id="animate"></div>
+  </div>
+<script>
+  function myMove() {
+    let elem = document.getElementById("animate");
+    let pos = 0;
+    let id = setInterval(frame, 5);
+    function frame() {
+
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slicing</title>
+</head>
+<body>
+  <p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+  <p id="demo"></p>
+
+  <p>The substr() method extract the part of the string with the second paramter length to specify the extracted parts</p>
+  <p id="demo"></p>
+<script>
+  let str = "apple, banana, orange";
+  let lookup = "banana" ;
+  let pos = str.indexOf(lookup);
+  console.log(pos);
+  console.log(lookup.length);
+  let res = str.slice(pos, lookup.length+pos);
+  console.log(res);
+  document.getElementById("demo").innerHTML = res;
+
+  let res2 = str.substr(pos, lookup.length);
+  document.getElementById("demo2").innerHTML = res2;
+</script>
+</body>
+</html>
