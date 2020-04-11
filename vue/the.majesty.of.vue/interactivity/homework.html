@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>People Of Vue</h1>
+    <ul class="list-group">
+      <li class="list-group-item" v-for="mayor in mayors">
+        {{mayor.name}} {{ mayor.votes }}
+        <button class="btn btn-default">Vote</button>
+      </li>
+    </ul>
+    <h1>Our mayor is {{ won }}!</h1>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script type="text/javascript">
+    new Vue({
+      el: '.container',
+      data: {
+        mayors: [
+          {
+            name: "Mr. Pink",
+            votes: 0,
+          },
+          {
+            name: "Mr. Black",
+            votes: 0,
+          },
+          {
+            name: "Mr. White",
+            votes: 0,
+          },
+          {
+            name: "Mr. Brown",
+            votes: 0,
+          }
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

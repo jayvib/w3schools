@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Bootstrap</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>Let's hear some stories!</h1>
+      <ul class="list-group">
+        <story v-for="story in stories" :story="story"></story>
+      </ul>
+    </div>
+  </div>
+  <template id="story-template">
+    <li class="list-group-item">
+      {{ story.writer }} said {{ story.plot }}
+      Story upvotes {{ story.votes }}.
+      <button v-show="!story.voted" @click="upvote" class="btn btn-default">Upvote</button>
+    </li>
+  </template>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script type="text/javascript">
+
+    Vue.component("story", {
+      props: ["story"],
+      template: "#story-template"
+    });
+
+    new Vue({
+      el: '#app',
+      data: {
+        stories: [
+          {
+            plot: "I crased my car today!",
+            writer: "Alex",
+            votes: 1,
+            voted: false,
+          },
+          {
+            plot: "Yesterday, someone stole my bag!",
+            writer: "John",
+            votes: 2,
+            voted: true,
+          },
+          {
+            plot: "Someone ate my chocolate...",
+            writer: "John",
+            votes: 3,
+            voted: false,
+          },
+          {
+            plot: "I ate someone's chocolate!",
+            writer: "Alex",
+            votes: 4,
+            voted: false,
+          }
+        ]
+      },
+      methods: {
+        upvote: function() {
+          this.story.votes += 1;
+          this.story.voted = true;
+        }
+      }
+    })
+  </script>
+</body>
+</html>

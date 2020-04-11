@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <story></story>
+    <story></story>
+    <story></story>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script type="text/javascript">
+    Vue.component("story", {
+      template: '<h1>My horse is amazing!</h1>'
+    });
+
+    new Vue({
+      el: '.container'
+    })
+  </script>
+</body>
+</html>

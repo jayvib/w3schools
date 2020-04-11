@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue</title>
+</head>
+<body>
+  <div id="app">
+    <template v-if="!message">
+      <h1>You must send a message for help!</h1>
+      <p>Dispatch a messanger immediately</p>
+      <p>To nearby kingdom of Hearts!</p>
+    </template>
+    <textarea v-model="message"></textarea><br>
+    <button v-show="messsage">
+      Send word to allies for help!
+    </button>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      message: "Our king is dead! Send Help!"
+    }
+  })
+</script>
+</html>

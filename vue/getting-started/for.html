@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }} {{ todo.priority }}
+      </li>
+    </ol>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          todos: [
+            {text: "Learn JavasScript", priority: 1},
+            {text: "Learn Vue", priority: 2},
+            {text: "Build someting awesome", priority: 3}
+          ]
+        }
+      })
+    </script>
+  </div>
+</body>
+</html>

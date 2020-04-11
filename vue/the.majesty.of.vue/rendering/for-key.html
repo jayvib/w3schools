@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Bootstrap</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Let's hear some stories!</h1>
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item" v-for="(key, story) in story">
+          {{ $index }}. {{ key }} said "{{ story }}".
+        </li>
+      </ul>
+    </div>
+    <pre>
+      {{ $data | json }}
+    </pre>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script type="text/javascript">
+    new Vue({
+      el: '.container',
+      data: {
+          story: {
+            plot: "I crased my car today!",
+            writer: "Luffy",
+            upvotes: 47
+          }
+      }
+    })
+  </script>
+</body>
+</html>

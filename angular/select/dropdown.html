@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <select ng-model="selectedName" ng-options="x for x in names"></select>
+    <h1>You selected: {{selectedName}}</h1>
+  </div>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+      $scope.names = ["Luffy", "Sanji", "Linus"];
+    })
+  </script>
+</body>
+</html>

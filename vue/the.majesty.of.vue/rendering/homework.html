@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Famous Stories</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container all">
+    <h1>People of Gaul</h1>
+    <ul class="list-group">
+      <li class="list-group-item" v-for="person in people">
+        {{ person.name }}  {{ person.age }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="container old">
+    <h1>"Old" People of Gaul</h1>
+    <ul class="list-group">
+      <li class="list-group-item" v-for="person in people | old">
+        {{ person.name }}  {{ person.age }}
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script>
+    new Vue({
+      el: ".all",
+      data: {
+        people: [
+          {
+            name: "Luffy",
+            age: 31
+          },
+          {
+            name: "Sanji",
+            age: 32
+          },
+          {
+            name: "Zoro",
+            age: 33
+          },
+          {
+            name: "Ussop",
+            age: 34
+          },
+          {
+            name: "Rayleigh",
+            age: 75
+          }
+        ]
+      }
+    });
+
+   Vue.filter('old', function(people){
+      return people.filter(function(person){
+        return person.age < 55
+      })
+   });
+
+   new Vue({
+     el: ".old",
+     data: {
+       people: [
+         {
+           name: "Luffy",
+           age: 31
+         },
+         {
+           name: "Sanji",
+           age: 32
+         },
+         {
+           name: "Zoro",
+           age: 33
+         },
+         {
+           name: "Ussop",
+           age: 34
+         },
+         {
+           name: "Rayleigh",
+           age: 75
+         }
+       ]
+     }
+   })
+
+  </script>
+</body>
+</html>

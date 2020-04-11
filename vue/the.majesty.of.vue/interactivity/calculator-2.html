@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Type two numbers and choose operation.</h1>
+    <form class="form-inline">
+      <input v-model="a" number class="form-control">
+      +
+      <input v-model="b" number class="form-control">
+    </form>
+    <h2>Result: {{a}} + {{b}} = {{c}}</h2>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+  <script type="text/javascript">
+    new Vue({
+      el: '.container',
+      data: {
+        a: 1,
+        b: 2,
+        operator: " "
+      },
+      computed: {
+        c: function() {
+          return this.a + this.b
+        }
+      }
+    })
+  </script>
+</body>
+</html>

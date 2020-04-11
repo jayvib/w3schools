@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <story v-bind:story="{plot: 'My horse is amazing.', writer: 'Mr.Weebly'}"></story>
+    <story v-bind:story="{plot: 'Luffy is the Pirate King', writer: 'Mr.Weebly'}"></story>
+    <story v-bind:story="{plot: 'Sanji the Great Cook', writer: 'Mr.Weebly'}"></story>
+    <template id="story-template">
+      <h1>{{ story.plot }} said "{{ story.writer }}"</h1>
+    </template>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+
+  <script type="text/javascript">
+    Vue.component("story", {
+      props: ['story'],
+      template: '#story-template'
+    });
+
+    new Vue({
+      el: '.container'
+    })
+  </script>
+</body>
+</html>

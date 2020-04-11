@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greetings Friend</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h2>Hello {{ name }}</h2>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="name">Enter your name:</label>
+          <input v-model="name" id="name" class="form-control" placeholder="Name" type="text">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: {
+        name: "",
+      }
+    })
+  </script>
+</body>
+</html>
